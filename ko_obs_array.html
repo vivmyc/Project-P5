@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>knockout observable array test</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="pageone">
+	    <div data-role="header" class="ui-content">
+			<p>My Doggies</p>
+		</div>
+
+		<div data-role="content" class="ui-content">
+			<ul data-bind="foreach: allDogs" data-role="listview">
+				<li data-bind="text: $data"></li>
+			</ul>
+			<br/><br/><br/>
+			<table>
+			    <thead>
+			        <tr><th>Doggie's Name</th></tr>
+			    </thead>
+			    <tbody data-bind="foreach: allDogs">
+			        <tr>
+			            <td data-bind="text: $data"></td>
+			        </tr>
+			    </tbody>
+			</table>
+      	</div> <!-- end of content -->
+    </div> <!-- end of page -->
+
+<script src="js/lib/knockout-3.3.0.js"></script>
+<script>
+var SimpleListModel = function(allDogs) {
+    this.allDogs = ko.observableArray(allDogs);
+};
+ko.applyBindings(new SimpleListModel(["Muffy", "Buddy", "Khloe"]));
+</script>
+
+  </body>
+</html>
