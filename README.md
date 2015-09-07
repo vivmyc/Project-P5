@@ -1,10 +1,7 @@
 ## Project P5 - Neighborhood Map
 
-### Using the application:
-
-Navigate to http://vivmyc.github.io/P5
-
-Here you can view various restaurants in the East Hampton NY area marked on a map.
+This application allows you to view various restaurants in the East Hampton NY area,
+near the rental home you are staying at.
 Clicking on a map marker will pop up a window displaying the restaurant's address,
 phone number and price category information, obtained asynchronously from Foursquare.
 You can click the phone link in the info window to call the restaurant.
@@ -18,3 +15,5 @@ For your reference, the rental property you are staying at will be displayed on 
 as a home icon.
 
 Please enjoy your stay!
+
+[Click Here](http://vivmyc.github.io/P5) to bring up the application.
